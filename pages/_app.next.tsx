@@ -1,7 +1,15 @@
+import React from "react";
 import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+import GlobalStyle from "@/app/global/Global.styled";
+
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
+    <React.Fragment>
+      <Component {...pageProps} />
+      <GlobalStyle />
+    </React.Fragment>
+  );
+};
 
 export default MyApp;
